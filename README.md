@@ -81,3 +81,29 @@
 ## 注释
     ctrl + k, ctrn + c 注释
     ctrl + k, ctrn + u 取消注释
+## 常见关键字
+    register int num = 100; // 建议num的值存放在寄存器中
+    signed 有符号的
+    unsigned 无符号的
+    static 静态属性
+    struct 结构体
+    union 联合体
+    void 无,无返回值
+    volatile
+    typedef 类型重命名
+### static
+    static声明的静态属性。
+    只会被声明一次，不会被销毁。
+### extern
+    声明外部符号
+## 常量和宏
+### define
+    define 是一个预处理指令
+    #define MAX 1000
+### 定义宏
+    #define ADD (X, Y) X + Y
+
+    宏是用来替换的，不是函数返回值
+    4 * ADD(2, 3)
+    
+    #define ADD (X, Y) (X + Y)
