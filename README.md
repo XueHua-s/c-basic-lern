@@ -141,3 +141,24 @@
     // 结构体的创建和初始化
 ### 指针取结构体成员
     结构体的指针 -> 成员名 
+### 头文件定义
+	//
+	// Created by snow_small on 27.1.24.
+	//
+	
+	#ifndef C_MAX_H
+	#define C_MAX_H
+ 	// 定义的类型提示
+	int max (int a, int b);
+	#endif //C_MAX_H
+### makefile
+	# this is make file
+ 	# 打包脚本配置
+  	# dome_2构成为, max.o静态库 + dome_2.c源文件
+	dome_2: max.o dome_2.c
+ 		# dome_2程序定义的指令
+   		# -o编译连接程序. dome_2.c 编译为dome_2
+		gcc max.o dome_2.c -o dome_2
+  	# max.o静态库与编译静态库的命令。
+	max.o: max.c
+		gcc -c max.c
